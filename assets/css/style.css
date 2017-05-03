@@ -1,0 +1,111 @@
+* {
+	box-sizing: border-box;
+
+}
+
+body {
+	background-image: url(../images/sand.jpg);
+	font-family: 'Ubuntu Condensed', sans-serif;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-color: #1F4A63;
+}
+
+h1 {
+	color: #fbffe9;
+	font-size: 68px;
+	margin-bottom: 30px;
+}
+
+h2 {
+	color: #fbffe9;
+	font-size: 48px;
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: #B22E2C;
+	color: #FF363D;
+	letter-spacing: 10px;
+	text-align: center;
+}
+
+#randomNumber, #score {
+	font-size: 100px;
+	color: #4C9CCC;
+	-webkit-text-stroke-width: 1px;
+   	-webkit-text-stroke-color: #254C63;
+   	letter-spacing: 0px;
+   
+}
+
+#wins, #losses {
+	margin-top: 55px;
+	padding-left: 5px;
+	font-size: 45px;
+	color: #FFFB9F;  	
+}
+
+.winlose {
+	font-size: 25px;
+	color: #FFFB4F;
+	margin-bottom: 0px;
+}
+
+#totalScoreText {
+	margin-top: 60px
+}
+
+h3 {
+	color: #fbffe9;
+	font-size: 48px;
+}
+
+p {
+	color: white;
+	font-size: 18px;
+}
+
+.gemPics {
+	width: 85px;
+	height: 85px;
+	margin: 30px 20px;
+}
+
+.allGemPics {
+	margin:15px;
+}
+
+.gemPics:hover  {  							/* tilt effect on image with mouse hover */
+  
+  -webkit-filter: drop-shadow(5px 5px 5px #222);    /* 	PNG DROP */
+  filter: drop-shadow(5px 5px 5px #222); 	/*	SHADOW   */
+}
+
+.gemPics:active {
+	-ms-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+/*----------------------------------Media Query 767-----------------------*/
+@media screen and (max-width: 767px){
+	
+	.gemPics {
+	width: 85px;
+	height: 85px;
+	margin: 0;
+	}
+	.allGemPics {
+		margin: 0px;
+	}
+
+}
+
+}
+
+
+
+
