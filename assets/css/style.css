@@ -1,17 +1,18 @@
 * {
 	box-sizing: border-box;
-
 }
 
-body {
-	background-image: url(../images/sand.jpg);
-	font-family: 'Ubuntu Condensed', sans-serif;
+html {
+	background: url(../images/sand.jpg) no-repeat center center fixed;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-  	background-repeat: no-repeat;
-  	background-color: #1F4A63;
+}
+
+body {
+  	font-family: 'Ubuntu Condensed', sans-serif;
+  	background-color: transparent;
 }
 
 h1 {
@@ -36,7 +37,7 @@ h2 {
 	-webkit-text-stroke-width: 1px;
    	-webkit-text-stroke-color: #254C63;
    	letter-spacing: 0px;
-   
+
 }
 
 #wins, #losses {
@@ -76,19 +77,40 @@ p {
 	margin:15px;
 }
 
-.gemPics:hover  {  							/* tilt effect on image with mouse hover */
-  
+.gemPics:hover  {  							
   -webkit-filter: drop-shadow(5px 5px 5px #222);    /* 	PNG DROP */
-  filter: drop-shadow(5px 5px 5px #222); 	/*	SHADOW   */
+  filter: drop-shadow(5px 5px 5px #222); 			/*	SHADOW   */
 }
 
 .gemPics:active {
-	-ms-transform: rotate(-10deg);
+	-ms-transform: rotate(-10deg);			/* tilt effect on image with mouse click */
   -webkit-transform: rotate(-10deg);
   -moz-transform: rotate(-10deg);
   -o-transform: rotate(-10deg);
   transform: rotate(-10deg);
 }
+
+.picWin {
+	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	margin-top: -204px;
+  	margin-left: -400px;
+  	height: 411px;
+  	width: 800px;
+}
+
+.picLose {
+	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	margin-top: -400px;
+  	margin-left: -400px;
+  	height: 800px;
+  	width: 800px;
+}
+
+
 
 /*----------------------------------Media Query 767-----------------------*/
 @media screen and (max-width: 767px){
@@ -96,16 +118,39 @@ p {
 	.gemPics {
 	width: 85px;
 	height: 85px;
-	margin: 0;
+	margin: 5px;
 	}
+
 	.allGemPics {
-		margin: 0px;
+		margin: 20px;
+		padding-left: 20px;
 	}
 
+	p, h1{
+		margin-left: 30px;
+	}
+
+x{
+		margin-left: 30px;
+	}
 }
 
+
+
+/*----------------------------------Media Query 491-----------------------*/
+@media screen and (max-width: 491px){
+
+	#target, #totalScore {
+		float:left;
+	}
+
+	#randomNumber, #score {
+		float:right;
+	}
+
+
+
+
+
+
 }
-
-
-
-
