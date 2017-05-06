@@ -60,6 +60,7 @@ h2 {
 h3 {
 	color: #fbffe9;
 	font-size: 48px;
+	margin-right:50px;
 }
 
 p {
@@ -129,16 +130,31 @@ p {
 	p, h1{
 		margin-left: 30px;
 	}
-
-x{
-		margin-left: 30px;
+	
+	h1 {
+		font-size: 60px;
 	}
+	
+	.article, p {
+		font-size: 16px;
+	}
+
+	#randomNumber, #score {
+	font-size: 90px;
+	}
+	
+	h2 {
+		font-size: 45px;
+	}
+	
+	.winlose {
+	font-size: 22px;
 }
 
 
 
-/*----------------------------------Media Query 491-----------------------*/
-@media screen and (max-width: 491px){
+/*----------------------------------Media Query 509-----------------------*/
+@media screen and (max-width: 509px){
 
 	#target, #totalScore {
 		float:left;
@@ -147,9 +163,27 @@ x{
 	#randomNumber, #score {
 		float:right;
 	}
+	
+	h1 {
+		font-size: 48px;
+	}
 
+	.article, p {
+		font-size: 12px;
+	}
 
-
+	#randomNumber, #score {
+	font-size: 80px;
+	}
+	
+	h2 {
+		font-size: 40px;
+	}
+	
+	.winlose {
+	font-size: 20px;
+}
+}
 
 
 
