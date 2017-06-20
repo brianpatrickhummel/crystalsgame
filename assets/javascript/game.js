@@ -48,6 +48,7 @@ $(document).ready(function() {
 	// define function that process each crystal click to see if change in total score will end the game
   	function checkGuess() {
 	  	if (totalScore === targetNumber) {	
+	  		$(".gemPics").remove();
 	  		var imageWin = $('<img>');
 	  		imageWin.addClass('picWin');
 	  		imageWin.attr('src', 'assets/images/win.png');
@@ -61,6 +62,7 @@ $(document).ready(function() {
 	  	}
 
 	  	else if (totalScore > targetNumber) {	
+	  		$(".gemPics").remove();
 	  		var imageLose = $('<img>');
 	  		imageLose.addClass('picLose');
 	  		imageLose.attr('src', 'assets/images/lose.png');
