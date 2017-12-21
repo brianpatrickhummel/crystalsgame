@@ -1,70 +1,82 @@
 <!doctype html>
 <html>
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-            <!-- jQuery CDN -->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-            <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-            <!-- Latest compiled and minified JavaScript -->
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
-        	<!-- Google Fonts -->
-    	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
-            <!-- Local CSS link -->
-         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    </head>
-    <body>
-       <div class="wrap">
-       		<div class="container">
-       			<div class="row">
-       				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-       					<h1>CrystalsCollector!</h2>
-       				</div>
-       			</div>
-       			<div class="row">
-       				<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
-       					<article>
-       						<p>Win the game by matching the target score without going over</p>						
-							<p>Each crystal will increment your score by a certain amount when clicked</p>
-							<p>Figure out which crystals you need to click to match the target score</p>					
-							<p>The value of each crystal changes</p>
-       					</article>
-       				</div>
-       				<div class="clearfix"></div>
-   				</div>      			
-       			<div class="row">
-					<div class="col-xs-5 col-sm-4 col-md-3 col-lg-3">
-						<h2 id="target">TARGET SCORE</h2>
-					</div>
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<h3 id="randomNumber"></h3>     <!-- where the target number will populate from JS -->
-					</div>
-       				<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">   				
-       					<p class="winlose" >WINS: <span id="wins"></span></p>
-       					<p class="winlose" >LOSSES: <span id="losses"></span></p>
-       				</div> 			
-       			</div>
-       			<div class="row">
-       				<div class="allGemPics col-xs-12 col-sm-9 col-md-7 col-lg-7">
-       					<!-- where images will populate from JS -->
-       				</div>
-       				<div class="clearfix"></div>
-       			</div>
-       			<div class="row">
-					<div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
-						<h2 id="total">TOTAL SCORE</h2>
-					</div>	
-					<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
-						<h3 id="score"></h3>  <!-- where Total score will populate from JS -->
-					</div>
-       				<div class="clearfix"></div>
-       			</div>
-       		</div>
-       	</div>
-    	<!-- local JS file link -->
-    <script src="assets/javascript/game.js"></script>
-    </body>  
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	    crossorigin="anonymous">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+	<!-- Local CSS link -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1>CrystalsCollector!</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+					<article>
+						<p>Win the game by matching the target score without going over</p>
+						<p>Each crystal will increment your score by a certain amount when clicked</p>
+						<p>Figure out which crystals you need to click to match the target score</p>
+						<p>The value of each crystal changes</p>
+					</article>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-5 col-sm-4 col-md-3 col-lg-3">
+					<h2 id="target">TARGET SCORE</h2>
+				</div>
+				<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+					<h3 id="randomNumber"></h3>
+					<!-- where the target number will populate from JS -->
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+					<p class="winlose">WINS:
+						<span id="wins"></span>
+					</p>
+					<p class="winlose">LOSSES:
+						<span id="losses"></span>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="allGemPics col-xs-12 col-sm-9 col-md-7 col-lg-7">
+					<!-- where images will populate from JS -->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+					<h2 id="total">TOTAL SCORE</h2>
+				</div>
+				<div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+					<h3 id="score"></h3>
+					<!-- where Total score will populate from JS -->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- jQuery CDN -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	    crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	    crossorigin="anonymous"></script>
+	<!-- local JS file link -->
+	<script src="assets/javascript/game.js"></script>
+</body>
+
 </html>
